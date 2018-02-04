@@ -1,4 +1,4 @@
-update=Sat 03 Feb 2018 07:30:14 PM EST
+update=Sun 04 Feb 2018 03:03:03 AM EST
 version=1
 last_client=kicad
 [pcbnew]
@@ -69,3 +69,4 @@ LibName37=rfcom
 LibName38=nxp
 LibName39=nxp_armmcu
 LibName40=sensors
+LibName41=modules/KiCad-Lib/SFUSat-power

@@ -39,7 +39,9 @@ LIBS:rfcom
 LIBS:nxp
 LIBS:nxp_armmcu
 LIBS:sensors
+LIBS:SFUSat-power
 LIBS:weather_station-cache
+LIBS:OpenMPPT-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268

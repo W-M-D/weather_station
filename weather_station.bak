@@ -39,7 +39,9 @@ LIBS:rfcom
 LIBS:nxp
 LIBS:nxp_armmcu
 LIBS:sensors
+LIBS:SFUSat-power
 LIBS:weather_station-cache
+LIBS:OpenMPPT-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -656,7 +658,7 @@ U 1 1 5A76310A
 P 7380 1170
 F 0 "AE1" H 7305 1345 50  0000 R CNN
 F 1 "ant" H 7305 1270 50  0001 R CNN
-F 2 "24ghztraceantenna:PCB_IF_ANT_2.4G" H 7380 1270 50  0001 C CNN
+F 2 "Microwave:SMA" H 7380 1270 50  0001 C CNN
 F 3 "" H 7380 1270 50  0001 C CNN
 	1    7380 1170
 	0    -1   -1   0   
@@ -959,4 +961,6 @@ F 3 "" H 6950 1330 50  0001 C CNN
 	1    6950 1330
 	-1   0    0    1   
 $EndComp
+Text GLabel 4700 4200 0    60   Input ~ 0
+ANEOMETER
 $EndSCHEMATC
