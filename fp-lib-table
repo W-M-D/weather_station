@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Housings_LGA)(type KiCad)(uri "$(KISYSMOD)Housings_LGA.pretty")(options "")(descr ""))
+)
