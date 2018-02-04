@@ -656,7 +656,7 @@ U 1 1 5A76310A
 P 7380 1170
 F 0 "AE1" H 7305 1345 50  0000 R CNN
 F 1 "ant" H 7305 1270 50  0001 R CNN
-F 2 "24ghztraceantenna:PCB_IF_ANT_2.4G" H 7380 1270 50  0001 C CNN
+F 2 "Microwave:SMA" H 7380 1270 50  0001 C CNN
 F 3 "" H 7380 1270 50  0001 C CNN
 	1    7380 1170
 	0    -1   -1   0   
@@ -695,7 +695,7 @@ F 3 "" H 7660 1410 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7740 1530 7660 1530
+	7100 1530 7740 1530
 Wire Wire Line
 	7660 1510 7660 1600
 Wire Wire Line
@@ -747,9 +747,9 @@ Text GLabel 10850 2900 1    60   Input ~ 0
 SWCLK
 Text GLabel 10550 2900 1    60   Input ~ 0
 SWDIO
-Text GLabel 6900 4400 2    60   Input ~ 0
-RADIO_UART_TX
 Text GLabel 6900 4300 2    60   Input ~ 0
+RADIO_UART_TX
+Text GLabel 6900 4200 2    60   Input ~ 0
 RADIO_UART_RX
 Text GLabel 10400 4600 1    60   Input ~ 0
 COMM_UART_TX
@@ -822,7 +822,7 @@ F 3 "" H 10550 3100 50  0001 C CNN
 	1    10550 3100
 	0    1    1    0   
 $EndComp
-Text GLabel 6900 4600 2    60   Input ~ 0
+Text GLabel 6900 4500 2    60   Input ~ 0
 RADIO_PTT
 Text GLabel 6900 2900 2    60   Input ~ 0
 CS_MPL115A1
@@ -852,7 +852,7 @@ Entry Wire Line
 	-450 4150 -350 4250
 Entry Wire Line
 	-450 4100 -350 4200
-Text GLabel 6900 4500 2    60   Input ~ 0
+Text GLabel 6900 4400 2    60   Input ~ 0
 RADIO_DATA
 Text GLabel 6900 4700 2    60   Input ~ 0
 SCL
@@ -862,6 +862,103 @@ Text GLabel 6900 3700 2    60   Input ~ 0
 SWCLK
 Text GLabel 6900 3600 2    60   Input ~ 0
 SWDIO
-Text GLabel 7950 3950 2    60   Input ~ 0
+Text GLabel 6900 4600 2    60   Input ~ 0
 RADIO_PD
+$Comp
+L Crystal Y2
+U 1 1 5A788BD1
+P 2300 3550
+F 0 "Y2" H 2300 3700 50  0000 C CNN
+F 1 "32.786khz" H 2300 3400 50  0000 C CNN
+F 2 "Crystals:Crystal_SMD_EuroQuartz_EQ161-2pin_3.2x1.5mm" H 2300 3550 50  0001 C CNN
+F 3 "" H 2300 3550 50  0001 C CNN
+	1    2300 3550
+	1    0    0    -1  
+$EndComp
+Text GLabel 2500 3500 1    60   Input ~ 0
+XL1
+Text GLabel 2050 3500 1    60   Input ~ 0
+XL2
+Wire Wire Line
+	2450 3550 2550 3550
+Wire Wire Line
+	2500 3550 2500 3500
+$Comp
+L C_Small C30
+U 1 1 5A7892B3
+P 2650 3550
+F 0 "C30" H 2660 3620 50  0000 L CNN
+F 1 "C_Small" H 2660 3470 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 2650 3550 50  0001 C CNN
+F 3 "" H 2650 3550 50  0001 C CNN
+	1    2650 3550
+	0    1    1    0   
+$EndComp
+Connection ~ 2500 3550
+$Comp
+L C_Small C29
+U 1 1 5A789395
+P 1900 3550
+F 0 "C29" H 1910 3620 50  0000 L CNN
+F 1 "C_Small" H 1910 3470 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 1900 3550 50  0001 C CNN
+F 3 "" H 1900 3550 50  0001 C CNN
+	1    1900 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2050 3500 2050 3550
+Wire Wire Line
+	2000 3550 2150 3550
+Connection ~ 2050 3550
+$Comp
+L GND #PWR026
+U 1 1 5A78955B
+P 1800 3550
+F 0 "#PWR026" H 1800 3300 50  0001 C CNN
+F 1 "GND" H 1800 3400 50  0000 C CNN
+F 2 "" H 1800 3550 50  0001 C CNN
+F 3 "" H 1800 3550 50  0001 C CNN
+	1    1800 3550
+	0    1    1    0   
+$EndComp
+Text GLabel 4700 3400 0    60   Input ~ 0
+XL1
+Text GLabel 4700 3500 0    60   Input ~ 0
+XL2
+$Comp
+L GND #PWR027
+U 1 1 5A78A3C0
+P 2750 3550
+F 0 "#PWR027" H 2750 3300 50  0001 C CNN
+F 1 "GND" H 2750 3400 50  0000 C CNN
+F 2 "" H 2750 3550 50  0001 C CNN
+F 3 "" H 2750 3550 50  0001 C CNN
+	1    2750 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_Coaxial J4
+U 1 1 5A78AAFF
+P 6950 1530
+F 0 "J4" H 6960 1650 50  0000 C CNN
+F 1 "Conn_Coaxial" V 7065 1530 50  0000 C CNN
+F 2 "Connectors:SMA_SMD_Jack_Straight" H 6950 1530 50  0001 C CNN
+F 3 "" H 6950 1530 50  0001 C CNN
+	1    6950 1530
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR028
+U 1 1 5A78B589
+P 6950 1330
+F 0 "#PWR028" H 6950 1080 50  0001 C CNN
+F 1 "GND" H 6950 1180 50  0000 C CNN
+F 2 "" H 6950 1330 50  0001 C CNN
+F 3 "" H 6950 1330 50  0001 C CNN
+	1    6950 1330
+	-1   0    0    1   
+$EndComp
+Text GLabel 4700 4200 0    60   Input ~ 0
+ANEOMETER
 $EndSCHEMATC
