@@ -1,4 +1,4 @@
-update=Sun 04 Feb 2018 03:03:03 AM EST
+update=Sun 04 Feb 2018 10:43:33 AM EST
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=
@@ -70,3 +68,5 @@ LibName38=nxp
 LibName39=nxp_armmcu
 LibName40=sensors
 LibName41=modules/KiCad-Lib/SFUSat-power
+[general]
+version=1
