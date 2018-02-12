@@ -40,6 +40,7 @@ LIBS:nxp
 LIBS:nxp_armmcu
 LIBS:sensors
 LIBS:SFUSat-power
+LIBS:battery_management
 LIBS:weather_station-cache
 EELAYER 25 0
 EELAYER END
@@ -834,10 +835,6 @@ Text GLabel 6900 2600 2    60   Input ~ 0
 SPI_MSI
 Text GLabel 6900 2500 2    60   Input ~ 0
 SPI_DRDY
-Entry Wire Line
-	-450 4150 -350 4250
-Entry Wire Line
-	-450 4100 -350 4200
 Text GLabel 6900 4400 2    60   Input ~ 0
 RADIO_DATA
 Text GLabel 6900 4700 2    60   Input ~ 0
@@ -1110,4 +1107,26 @@ Text GLabel 3100 5650 0    60   Input ~ 0
 v_batt
 Text GLabel 4700 3900 0    60   Input ~ 0
 v_batt
+$Comp
+L GND #PWR041
+U 1 1 5A7E57D6
+P 2000 6000
+F 0 "#PWR041" H 2000 5750 50  0001 C CNN
+F 1 "GND" H 2000 5850 50  0000 C CNN
+F 2 "" H 2000 6000 50  0001 C CNN
+F 3 "" H 2000 6000 50  0001 C CNN
+	1    2000 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mounting_Hole_PAD MK9
+U 1 1 5A7E5834
+P 2000 5900
+F 0 "MK9" H 2000 6150 50  0000 C CNN
+F 1 " " H 2000 6075 50  0000 C CNN
+F 2 "via:via" H 2000 5900 50  0001 C CNN
+F 3 "" H 2000 5900 50  0001 C CNN
+	1    2000 5900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
